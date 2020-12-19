@@ -9,7 +9,9 @@ for line in content.split('\n'):
         todo_name_text = todo_from_name.split(', ["importance",')[0]
         split_name_text = todo_name_text.split('"], ["')
         print(split_name_text[0])
-        print(split_name_text[1])
+        if 'text' in split_name_text[1]:
+            if split_name_text[1].split('text", ')[1] != '""]':
+                print(split_name_text[1].split('text", ')[1])
 
         
 
