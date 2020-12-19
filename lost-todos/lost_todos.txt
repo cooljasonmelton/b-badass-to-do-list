@@ -10,8 +10,6 @@ Migrating to CreateTopics (20201111104000)
   [1m[36mprimary::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201111104000"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
 Migrating to CreateTodos (20201111104130)
-  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "name" character varying, "text" text, "importance" integer, "topic_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_620d9d25a2"
 FOREIGN KEY ("topic_id")
   REFERENCES "topics" ("id")
 )[0m
